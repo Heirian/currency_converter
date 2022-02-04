@@ -7,6 +7,7 @@ defmodule CurrencyConverter.Accounts.User do
   schema "users" do
     field :email, :string
     field :password, :string
+    has_many :currency_conversion_histories, CurrencyConverter.Finances.CurrencyConversionHistory
 
     timestamps()
   end
