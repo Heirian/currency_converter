@@ -7,6 +7,8 @@ defmodule CurrencyConverterWeb.Router do
 
   scope "/api", CurrencyConverterWeb do
     pipe_through :api
+
+    post "/users", UserController, :register
   end
 
   # Enables LiveDashboard only for development
