@@ -58,3 +58,7 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :currency_converter, CurrencyConverter.Guardian,
+  issuer: "currency_converter",
+  secret_key: "mysecretkey"

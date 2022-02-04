@@ -83,4 +83,7 @@ if config_env() == :prod do
   #     config :swoosh, :api_client, Swoosh.ApiClient.Hackney
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
+  config :currency_converter, CurrencyConverter.Guardian,
+    issuer: "currency_converter",
+    secret_key: System.get_env("GUARDIAN_SECRET_KEY")
 end
