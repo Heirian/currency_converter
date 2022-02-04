@@ -28,6 +28,8 @@ jobs:
         with:
           elixir-version: '1.13.2'
           otp-version: '24.0.3'
+      - run: env LC_ALL=en_US.UTF-8
+      - run: export LC_ALL
       - run: mix deps.get
       - run: mix deps.compile
       - run: mix test
