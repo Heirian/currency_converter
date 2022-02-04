@@ -7,8 +7,8 @@ import Config
 # Run `mix help test` for more information.
 config :currency_converter, CurrencyConverter.Repo,
   username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
+  password: System.get_env("DB_PASSWORD") || "localhost",
+  hostname: System.get_env("DB_HOST") || "localhost",
   database: "currency_converter_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
