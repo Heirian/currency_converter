@@ -21,6 +21,8 @@ defmodule CurrencyConverterWeb.Router do
 
     post "/session/refresh", SessionController, :refresh
     post "/session/delete", SessionController, :delete
+    get "/currency_conversion_histories", CurrencyConversionHistoryController, :index
+    post "/currency_conversion_histories", CurrencyConversionHistoryController, :create
   end
 
   # Enables the Swoosh mailbox preview in development.

@@ -28,3 +28,6 @@ config :logger, level: :warn
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :currency_converter, CurrencyConverter.Finances,
+  secret_key: System.get_env("EXCHANGERATESAPI_KEY")

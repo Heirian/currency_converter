@@ -62,3 +62,6 @@ config :phoenix, :plug_init_mode, :runtime
 config :currency_converter, CurrencyConverter.Guardian,
   issuer: "currency_converter",
   secret_key: "mysecretkey"
+
+config :currency_converter, CurrencyConverter.Finances,
+  secret_key: System.get_env("EXCHANGERATESAPI_KEY")

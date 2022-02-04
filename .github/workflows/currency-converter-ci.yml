@@ -36,3 +36,4 @@ jobs:
         env:
           DB_PASSWORD: postgres
           DB_HOST: postgres
+          EXCHANGERATESAPI_KEY: random_api_key
